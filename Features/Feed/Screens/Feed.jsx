@@ -34,7 +34,7 @@ export default function Feed({ navigation }) {
       />
       <Post username="fionapeng16" body="hello" />
       {GIVEN_POSTS.map((postObject) => (
-      < Post username={postObject.username} body={postObject.body} />
+      < Post key={postObject.id} username={postObject.username} body={postObject.body} />
       ))}
     </View>
   );
