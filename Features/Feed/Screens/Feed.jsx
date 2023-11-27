@@ -1,5 +1,6 @@
 import { Button, Text, View } from 'react-native';
 import PropTypes from 'prop-types';
+import Post from '../Components/Post';
 
 export default function Feed({ navigation }) {
   const GIVEN_POSTS = [
@@ -31,6 +32,10 @@ export default function Feed({ navigation }) {
         title="To Landing"
         onPress={navigateToLanding}
       />
+      <Post username="fionapeng16" body="hello" />
+      {GIVEN_POSTS.map((postObject) => (
+      < Post username={postObject.username} body={postObject.body} />
+      ))}
     </View>
   );
 }
